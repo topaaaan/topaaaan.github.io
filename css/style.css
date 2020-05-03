@@ -1,0 +1,104 @@
+html {
+	position: relative;
+}
+
+body {
+	margin-bottom: 50px;
+}
+
+.nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #999;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+.navbar-light, .navbar-dark {
+	font-weight: bold;
+	text-shadow: 1px 1px 5px white;
+}
+
+.navbar-dark {
+	text-shadow: 1px 1px 5px black;
+}
+
+.jumbotron {
+	background-image: url('../img/background.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 0 -40px;
+	overflow: hidden;
+}
+
+.jumbotron h1, .jumbotron p {
+	text-shadow: 1px -1px 10px #fff;
+}
+
+.jumbotron img {
+	width: 200px;
+	height: 200px;
+	border: 5px solid #fff;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.75);
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+hr {
+	width: 250px;
+	border-top: 3px solid #999;
+}
+
+section {
+	min-height: 600px;
+}
+
+.pKiri, .pKanan {
+	opacity: 0;
+	transform: translate(-50px, 0) rotate(15deg);
+	transition: 1s;
+}
+
+.pKanan {
+	transform: translate(50px, 0) rotate(-15deg);
+}
+
+.pKiri.pMuncul, .pKanan.pMuncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.portfolio {
+	background-color: #eee;
+}
+
+.img-thumbnail {
+	margin-bottom: 30px;
+	opacity: 0;
+	transform: translate(0px, -40px);
+	transition: .5s;
+}
+.img-thumbnail.muncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+.contact {
+	min-height: 800px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	background-color: #333; 
+}
+
+footer p {
+	color: white;
+	font-size: .8em;
+}
